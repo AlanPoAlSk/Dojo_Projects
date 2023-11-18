@@ -1,0 +1,535 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 150vh;
+    background-color: black; 
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    height: 850px;
+    background-color: black;
+    filter: none;
+}
+
+.flex  {
+    height: auto;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.flexH {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flexTV {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexStart {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+}
+
+#menupart , #menupart2 {
+    visibility: hidden;
+}
+
+.line   {
+    width: 35px;
+    height: 5px;
+    background-color: cornsilk;
+    margin: 6px 0;
+}
+
+.align {
+    text-align: center;
+}
+
+.font {
+    font-family: 'Young Serif', serif;
+}
+
+.font1 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.fontCP {
+    font-family: 'Pacifico'; 
+    font-style: italic;
+}
+
+.shiftdown {
+    margin-top: 10px;
+}
+
+.Michael {
+    height: 300px;
+    width: 200px;
+}
+
+.Titus {
+    height: 300px;
+    width: 200px;
+}
+
+.book , .logo , .spotifyLogo {
+    height: 70px;
+    width: 150px;
+}
+
+.bord {
+    border: 4px solid whitesmoke;
+}
+
+.backWhite {
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+}
+
+.opacity   {
+    opacity: 10;
+}
+
+.margTB {
+    margin: 30px 0px 30px 0px;
+}
+
+.margTB2 {
+    margin: 20px 0px 20px 0px;
+}
+
+.margL {
+    margin-left: 160px;
+}
+
+.margR {
+    margin-right: 160px;
+}
+
+.bigger {
+    font-size: 2.6em;
+}
+
+.backCBlack {
+    background-color: black;
+}
+
+.textC {
+    color: cornsilk;
+}
+
+.size {
+    height: 200px;
+    width: 200px;
+}
+
+.bigSize {
+    height: 120px;
+    width: 100%;
+}
+
+.removeDeco {
+    text-decoration: none;
+}
+
+.col1 {
+    color: beige;
+}
+
+.col2 {
+    color: rgb(140, 208, 39);
+}
+
+.col3 {
+    color: red;
+}
+
+.col4 {
+    color: aliceblue;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    opacity: 1.2;
+    border: 2px solid grey;
+}
+
+.separation {
+    margin: 100px 0px;
+}
+
+.position1 {
+    position: relative;
+    top: -680px;
+}
+
+.position2 {
+    position: relative;
+    top: -380px;
+}
+
+#popup1 {
+    position: relative;
+    height: 780px;
+    width: 1000px;
+    background-color: azure;
+    border: 2px solid black;
+    padding: 10px;
+    margin-left: 270px ;
+    top: -1150px;
+    left: -135px;
+    z-index: 1;
+    display: none;
+    text-align: start;
+    
+}
+
+#buttOut {
+    border-radius: 75%;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    bottom: 780px;
+    left: 1000px;
+    list-style: none;
+    background-color: whitesmoke;
+    color: black;
+    border: 2px solid black;
+    font-size: xx-large
+}
+
+ol {
+    height: 90px;
+    width: 150px;
+    text-align: center;
+}
+
+li {
+    margin-left: 8px;
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: center ;
+    margin: 20px 0px 20px 0px
+}
+
+h4 {
+    font-size: smaller;
+    margin-top: 5px;
+}
+
+.smaller {
+    font-size: small;
+}
+
+.year  {
+    font-size: smaller;
+    font-weight: bold;
+}
+
+#jazz {
+    position: relative;
+    height: 100px;
+    width: 550px;
+    top: -850px;
+    left: 690px;
+    z-index: 10;
+    display: none;
+}
+
+#titus {
+    height: 310px;
+    width: 208px;
+    background-color: whitesmoke;
+    color: black;
+    position: relative;
+    left: 775px;
+    top: -740px;
+    border: 2px solid whitesmoke;
+    /* border-radius: 5%; */
+    visibility: hidden;
+
+}
+
+#wikiBosch {
+    height: 110px;
+    width: 80px;
+    margin-left: 60px;
+    margin-top: 5px;
+    border: 1px solid black;
+}
+
+#michael {
+    height: 310px;
+    width: 204px;
+    background-color: whitesmoke;
+    color: black;
+    position: relative;
+    left: 296px;
+    top: -1050px;
+    border: 2px solid whitesmoke;
+    /* border-radius: 5%; */
+    visibility: hidden;
+}
+
+#wikiMich {
+    height: 110px;
+    width: 80px;
+    margin-left: 60px;
+    margin-top: 5px;
+    border: 1px solid black;
+}
+
+.altex {
+    margin-left: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.playlistS {
+    height: 720px;  
+    width: 280px;
+    position: relative;
+    top: -1707px;
+    left: 1290px;
+    border: 2px solid rgb(140, 208, 39);
+    display: none;
+}
+
+.bordCMusic {
+    border: px solid rgb(140, 208, 39);
+}
+
+.textP {
+    color: black;
+    text-align: center;
+    padding: 20px 0 ;
+    background-color: rgb(140, 208, 39);
+    margin-bottom: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#player {
+    width: 220px; 
+    margin: 9px 0px 8px 25px;
+}
+
+.homepage {
+    height: auto;
+    width: 1100px;
+}
+
+#legacy , #original {
+    height: 280px;
+    width: 700px;
+}
+
+#original {
+    border:4px solid whitesmoke;
+}
+
+#legacy {
+    border:4px solid sandybrown;
+}
+
+.orig , .lega {
+    height: 20px;
+}
+
+.series {
+    height: 510px;
+    width: 700px;
+    position: relative;
+    top: -1700px;
+    left: 10px;
+    background: transparent;
+}
+
+.original {
+    margin-right: 20px;
+}
+
+#originalimg {
+    visibility: hidden;
+}
+
+#spinoffimg {
+    visibility: hidden;
+}
+
+.sOrig {
+
+    height: 60px;
+    width: 200px;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 12%;
+    border-color: whitesmoke;
+    margin-bottom: 10px;
+    position: relative;
+    top: -2160px;
+    left: 780px;
+    font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.sLega {
+    height: 60px;
+    width: 200px;
+    background-color: rgb(119, 175, 119);
+    color: black;
+    border-radius: 12%;
+    border-color: sandybrown;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    top: -2050px;
+    left: 780px;
+    font-size: xx-large;
+}
+
+#closingTVS {
+    border-radius: 75%;
+    border: 2px solid black;
+    height: 40px;
+    width: 40px;
+    background-color: whitesmoke;
+    color: black;
+    position: relative;
+    top: -2570px;
+    left: 730px;
+    font-size: xx-large;
+    visibility: hidden;
+}
+
+#seriesOr , #seriesLe {
+    visibility: hidden;
+}
+
+.noDeco {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#menupart2 {
+    filter: none;
+}
+
+.sseven {
+    margin-bottom: 140px;
+}
+
+.leader {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.slider_cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.slider_cont img {
+    display: none;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slider_cont img.active {
+    display: block;
+
+}
+
+.prog {
+    height: 20px;
+    width: 80%;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.prog #length {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+.prog #progress_animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: lightskyblue;
+    z-index: 55;
+    animation: moving;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moving {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+.prog .slider_count {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.slider_count .count {
+    width: 20%;
+    border: 1px solid darkgray;
+}
+
+#loadButton {
+    position: absolute;
+    top: 50px;
+    left: 1150px;
+    height: 40px;
+    width: 90px;
+    font-size: larger;
+    border: 2px solid black;
+    box-shadow: 8px 8px 8px grey;
+    visibility: visible;
+    
+}
+
+

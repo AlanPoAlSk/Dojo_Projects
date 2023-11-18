@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Bosch Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="leader" id="leader1">
+        <div class="slider_cont">
+            <img src="images/slide1.jpg" alt="pic1" class="slide active">
+            <img src="images/slide2.jpg" alt="pic2" class="slide"> 
+            <img src="images/slide3.jpg" alt="pic3" class="slide"> 
+            <img src="images/slide4.jpeg" alt="pic4" class="slide"> 
+            <img src="images/slide5.jpg" alt="pic5" class="slide"> 
+        </div>
+        <div class="prog">
+            <div id="length"></div>
+            <div id="progress_animation"></div>
+            <div class="slide_count">
+                <div class="count"></div>
+                <div class="count"></div>
+                <div class="count"></div>
+                <div class="count"></div>
+                <div class="count"></div>
+            </div>
+        </div>
+        <button id="loadButton" onclick="removeLoadingPage(), hideshow()" >Skip</Skip></button>
+    </div>
+    <div class="container" id="contain">
+        <div class="top flexH backCBlack textC bigSize bord">
+            <div class="homepage flexH">
+                <h1 class="align bigger margTB2 font">Hieronymous "Harry" BOSCH</h1>
+                <h2 class="align fontCP shiftdown">-"Everybody counts or nobody counts."-</h2>
+            </div>
+            <div class="menu" onclick="openmenu()" ondblclick="hidemenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="videoLine">
+            <video class="video" src="BoschMainTitleAmazonOriginalsCan'tLetGo.mp4" muted loop autoplay controls></video>
+        </div>
+        <div class="1stLine flex position1 opacity" id="menupart">
+            <div class="books bord backWhite margT size">
+                <h2 class="margTB"><a class="removeDeco col1 font1" href="#" onclick="openBooks()">BOOKS</a></h2>
+                <img class="book" src="images/books.jpg" alt="books" onmouseover="switchimg()"
+                    onmouseout="changebackimg()">
+            </div>
+            <div class="music bord backWhite margT size" onmouseenter="on()" onmouseleave="off()">
+                <h2 class="margTB"><a class="removeDeco col2 font1" href="#" onclick="openMusic()"
+                        ondblclick="hideMusic()">MUSIC</a></h2>
+                <a href="https://open.spotify.com/search/bosch%20jazz/playlists" target="_blank"><img
+                        class="spotifyLogo" src="images/Spotify_logo.jpg" alt="spotify"></a>
+            </div>
+            <div class="tvSeries bord backWhite margT size">
+                <h2 class="margTB"><a class="removeDeco col3 font1" href="#" onclick="openTVS()">TV SERIES</a></h2>
+                <a href="https://www.amazon.com/gp/video/detail/B089XPDDMW/ref=atv_dp_season_select_s1"
+                    target="_blank"><img class="logo" src="images/boschLogo.jpeg" alt="serieLogo"></a>
+            </div>
+        </div>
+    </div>
+    <div class="2ndLine flex position2  opacity" id="menupart2">
+        <div class="left bord backWhite margL position2a">
+            <img class="Michael" src="images/Connelly.jpg" alt="author">
+            <h2><a class="removeDeco col4" href="https://en.wikipedia.org/wiki/Michael_Connelly" target="_blank"
+                    onmouseenter="onM()" onmouseleave="offM()">Michael Connelly</a></h2>
+            <p class="col4">- The author -</p>
+        </div>
+        <div class="rigth bord backWhite margR position2b">
+            <img class="Titus" src="images/TitusWelliverFeatured.jpg" alt="star">
+            <h2><a class="removeDeco col4" href="https://en.wikipedia.org/wiki/Titus_Welliver" target="_blank"
+                    onmouseenter="onW()" onmouseleave="offW()">Titus Welliver</a></h2>
+            <p class="col4">- The star -</p>
+        </div>
+    </div>
+    <div class="ListofBooks">
+        <ol class="booksList" id="popup1">
+            <li>
+                <span><img src="BoschBooks/1.jpg" alt="TBE"></span>
+                <h4> <a href="https://www.goodreads.com/book/show/32508.The_Black_Echo" target="_blank">The Black
+                        Echo</a></h4>
+                <p class="year">- 1992</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/2.jpg" alt="TBI"></span>
+                <h4><a href="https://www.goodreads.com/book/show/24244.The_Black_Ice" target="_blank">The Black Ice</a>
+                </h4>
+                <p class="year">- 1993</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/3.jpg" alt="TCB"></span>
+                <h4><a href="https://www.goodreads.com/book/show/49350.The_Concrete_Blonde" target="_blank">The Concrete
+                        Blonde</a></h4>
+                <p class="year">- 1994</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/4.jpg" alt="TLC"></span>
+                <h4><a href="https://www.goodreads.com/book/show/49353.The_Last_Coyote" target="_blank">The Last
+                        Coyote</a></h4>
+                <p class="year">- 1995</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/5.jpg" alt="TM"></span>
+                <h4><a href="https://www.goodreads.com/book/show/58962.Trunk_Music" target="_blank">Trunk Music</a></h4>
+                <p class="year">- 1997</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/6.jpg" alt="AF"></span>
+                <h4><a href="https://www.goodreads.com/book/show/32502.Angels_Flight" target="_blank">Angels Fligth</a>
+                </h4>
+                <p class="year">- 1999</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/7.jpg" alt="ADMTN"></span>
+                <h4 class="smaller"><a href="https://www.goodreads.com/book/show/76867.A_Darkness_More_Than_Night"
+                        target="_blank">A Darkness More <br>Than Nigth</a> <span>- 2000</span></h4>
+            </li>
+            <li>
+                <span><img src="BoschBooks/8.jpg" alt="COB"></span>
+                <h4><a href="https://www.goodreads.com/book/show/84777.City_of_Bones" target="_blank">City of Bones</a>
+                </h4>
+                <p class="year">- 2002</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/9.jpg" alt="LL"></span>
+                <h4><a href="https://www.goodreads.com/book/show/126507.Lost_Light" target="_blank">Lost Ligth</a></h4>
+                <p class="year">- 2003</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/10.jpg" alt="TN"></span>
+                <h4><a href="https://www.goodreads.com/book/show/409918.The_Narrows" target="_blank">The Narrows</a>
+                </h4>
+                <p class="year">- 2004</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/11.jpg" alt="TC"></span>
+                <h4><a href="https://www.goodreads.com/book/show/32505.The_Closers" target="_blank">The Closers</a></h4>
+                <p class="year">- 2005</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/12.jpg" alt="EP"></span>
+                <h4><a href="https://www.goodreads.com/book/show/32501.Echo_Park" target="_blank">Echo Park</a></h4>
+                <p class="year">- 2006</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/13.jpg" alt="TO"></span>
+                <h4><a href="https://www.goodreads.com/book/show/84785.The_Overlook" target="_blank">The Overlook</a>
+                </h4>
+                <p class="year">- 2007</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/14.jpg" alt="ND"></span>
+                <h4><a href="https://www.goodreads.com/book/show/6413193-nine-dragons" target="_blank">Nine Dragons</a>
+                </h4>
+                <p class="year">- 2009</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/15.jpg" alt="TD"></span>
+                <h4><a href="https://www.goodreads.com/book/show/11082037-the-drop" target="_blank">The Drop</a></h4>
+                <p class="year">- 2011</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/16.jpg" alt="TBB"></span>
+                <h4><a href="https://www.goodreads.com/book/show/13495034-the-black-box" target="_blank">The Black
+                        Box</a></h4>
+                <p class="year">- 2012</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/17.jpg" alt="TBR"></span>
+                <h4><a href="https://www.goodreads.com/book/show/20881071-the-burning-room" target="_blank">The Burning
+                        Room</a></h4>
+                <p class="year">- 2014</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/18.jpg" alt="TCr"></span>
+                <h4><a href="https://www.goodreads.com/book/show/25010281-the-crossing" target="_blank">The Crossing</a>
+                </h4>
+                <p class="year">- 2015</p>
+            </li>
+            <li class="mt">
+                <span><img src="BoschBooks/19.jpg" alt="TWSOG"></span>
+                <h4 class="smaller"><a href="https://www.goodreads.com/book/show/29154543-the-wrong-side-of-goodbye"
+                        target="_blank">The Wrong Side <br>of Goodbye</a> <span>- 2016</span></h4>
+            </li>
+            <li>
+                <span><img src="BoschBooks/20.jpg" alt="TKOT"></span>
+                <h4><a href="https://www.goodreads.com/book/show/34390820-two-kinds-of-truth" target="_blank">Two Kinds
+                        of Truth</a></h4>
+                <p class="year">- 2017</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/21.jpg" alt="DSN"></span>
+                <h4><a href="https://www.goodreads.com/book/show/38204677-dark-sacred-night" target="_blank">Dark Sacred
+                        Nigth</a></h4>
+                <p class="year">- 2018</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/22.jpg" alt="TNF"></span>
+                <h4><a href="https://www.goodreads.com/book/show/43885041-the-night-fire" target="_blank">The Nigth
+                        Fire</a></h4>
+                <p class="year">- 2019</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/23.jpg" alt="TDH"></span>
+                <h4><a href="https://www.goodreads.com/book/show/57070526-the-dark-hours" target="_blank">The Dark
+                        Hours</a></h4>
+                <p class="year">- 2021</p>
+            </li>
+            <li>
+                <span><img src="BoschBooks/24.jpg" alt="DS"></span>
+                <h4><a href="https://www.goodreads.com/book/show/60219987-desert-star" target="_blank">Desert Star</a>
+                </h4>
+                <p class="year">- 2022</p>
+            </li>
+            <button id="buttOut" onclick="hide1()">X</button>
+        </ol>
+        <div id="titus">
+            <img src="images/Titus_Welliver_Wiki.jpg" alt="wikiBosch" id="wikiBosch">
+            <p class="altex">Titus B. Welliver is an American actor. He is best known for his portrayals of the Man in
+                Black in Lost, Silas Adams in Deadwood, Jimmy O’Phelan in Sons of Anarchy, and the title role in the
+                television series Bosch and Bosch: Legacy. He is also known for... </p>
+        </div>
+        <div id="michael">
+            <img src="images/MConnellyWiki.jpg" alt="wikiMich" id="wikiMich">
+            <p class="altex">Michael Joseph Connelly is an American author of detective novels and other crime fiction,
+                notably those featuring LAPD Detective Hieronymus "Harry" Bosch and criminal defense attorney Mickey
+                Haller. Connelly is the bestselling... </p>
+        </div>
+        <!-- <img src="images/BoschJazz.png" alt="jazz" id="jazz"> -->
+    </div>
+    <div class="playlistS" id="musicPlayer">
+        <div class="textP bordCMusic">
+            <h3>Enjoy some good Bosch's music <br> If you liked it, click on the <br> Spotify logo for more! </h3>
+        </div>
+        <div class="song1"><audio id="player" autoplay controls>
+                <source src="playlist/Chris_Botti_ft Mark_Knopfler-What_a_Wonderful_World.mp3" type="audio/mp3">
+            </audio></div>
+        <div class="song2"><audio id="player" controls>
+                <source src="playlist/Patricia.mp3" type="audio/mp3">
+            </audio></div>
+        <div class="song3"><audio id="player" controls>
+                <source src="playlist/Blues_for_Harry_Bosch.mp3" type="audio/mp3">
+            </audio></div>
+        <div class="song4"><audio id="player" controls>
+                <source src="playlist/Art_Pepper_Somewhere_Over_the_Rainbow.mp3" type="audio/mp3">
+            </audio></div>
+        <div class="song5"><audio id="player" controls>
+                <source src="playlist/Art_Pepper_You'd_Be_So_Nice_to_Come_Home_To.mp3" type="audio/mp3">
+            </audio></div>
+        <div class="song6"><audio id="player" controls>
+                <source src="playlist/John_Coltrane_Quartet_-_Soul_Eyes.mp3" type="audio/mp3">
+            </audio></div>
+        <div class="song7"><audio id="player" controls>
+                <source src="playlist/Let's_Face_the_Music_and_Dance.mp3" type="audio/mp3">
+            </audio></div>
+        <div class="song8"><audio id="player" controls>
+                <source src="playlist/Tom_Harrell_-_On_the_Roof_(1976).mp3" type="audio/mp3">
+            </audio></div>
+    </div>
+    <div class="series" id="originalimg">
+        <div class="original">
+            <img id="original" src="images/boschSeason1.jpg" alt="boschoriginal" onclick="openSeasonOr()"
+                ondblclick="closeSeasonOr()">
+            <p class="orig"></p>
+        </div>
+        <div class="spinoff" id="spinoffimg">
+            <img id="legacy" src="images/boschLegacy.jpg" alt="boschlegacy" onclick="openSeasonLe()"
+                ondblclick="closeSeasonLe()">
+            <p class="lega"></p>
+        </div>
+    </div>
+    <div class="seasonsOrig flexStart" id="seriesOr">
+        <div class="firstthree">
+            <div class="sone">
+                <a href="https://www.amazon.com/gp/video/detail/B089XPDDMW/ref=atv_dp_season_select_s1" target="_blank"
+                    class="noDeco"><button class="sOrig">Season 1</button></a>
+            </div>
+            <div class="stwo">
+                <a href="https://www.amazon.com/gp/video/detail/B089XSLXVY/ref=atv_dp_season_select_s2" target="_blank"
+                    class="noDeco"><button class="sOrig">Season 2</button></a>
+            </div>
+            <div class="sthree">
+                <a href="https://www.amazon.com/gp/video/detail/B089XW8JFG/ref=atv_dp_season_select_s3" target="_blank"
+                    class="noDeco"><button class="sOrig">Season 3</button></a>
+            </div>
+        </div>
+        <div class="secondthree">
+            <div class="sfour">
+                <a href="https://www.amazon.com/gp/video/detail/B089XSVPGF/ref=atv_dp_season_select_s4" target="_blank"
+                    class="noDeco"><button class="sOrig">Season 4</button></a>
+            </div>
+            <div class="sfive">
+                <a href="https://www.amazon.com/gp/video/detail/B089XPDHLY/ref=atv_dp_season_select_s5" target="_blank"
+                    class="noDeco"><button class="sOrig">Season 5</button></a>
+            </div>
+            <div class="ssix">
+                <a href="https://www.amazon.com/gp/video/detail/B08BYXD1KM/ref=atv_dp_season_select_s6" target="_blank"
+                    class="noDeco"><button class="sOrig">Season 6</button></a>
+            </div>
+        </div>
+        <div class="sseven">
+            <a href="https://www.amazon.com/gp/video/detail/B0958QPKTM/ref=atv_dp_season_select_s7" target="_blank"
+                class="noDeco"><button class="sOrig">Season 7</button></a>
+        </div>
+    </div>
+    <div class="seasonsLega" id="seriesLe">
+        <div class="sLone">
+            <a href="https://www.amazon.com/gp/video/detail/B09PQDFV3L/ref=atv_dp_season_select_s1" target="_blank"
+                class="noDeco"><button class="sLega">Season 1</button></a>
+        </div>
+        <div class="sLtwo">
+            <a href="https://www.amazon.com/gp/video/detail/B0CBG82H3J/ref=atv_dp_season_select_s2" target="_blank"
+                class="noDeco"><button class="sLega">Season 2</button></a>
+        </div>
+    </div>
+    <button id="closingTVS" onclick="closeTVS()">X</button>
+    <script src="script.js"></script>
+</body>
+
+</html>
