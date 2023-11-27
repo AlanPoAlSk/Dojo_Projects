@@ -8,44 +8,45 @@
 
     <style>
         body {
+            margin: 10px 100px;
             overflow: hidden;
-            margin: 10px 100px;
             background-color: bisque;
             background-image: url('https://img.freepik.com/free-vector/flower-leaves-background_1188-214.jpg?w=1380&t=st=1700140040~exp=1700140640~hmac=5628c95abdce27810f15038f344aa092eff0ea7952dfda1a64663a3b0168e554');
         }
-            .Text {
-                text-decoration: line-through;
-                text-decoration-thickness: 4px;
-            }
-            
-    </style>
-</head>
-<body>
-    
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard AS</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <style>
-        body {
-            margin: 10px 100px;
-            background-color: bisque;
-            background-image: url('https://img.freepik.com/free-vector/flower-leaves-background_1188-214.jpg?w=1380&t=st=1700140040~exp=1700140640~hmac=5628c95abdce27810f15038f344aa092eff0ea7952dfda1a64663a3b0168e554');
+        .Text {
+            text-decoration: line-through;
+            text-decoration-thickness: 4px;
         }
-            .Text {
-                text-decoration: line-through;
-                text-decoration-thickness: 4px;
-            }
-            
+        .content-on-top {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10000; 
+        }
+        .blur-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(6px); /* Adjust the blur amount as needed */
+            z-index: 9999;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
-    
-    <div class="d-flex justify-content-between align-items-center  mt-3">
+    <div class="content-on-top">
+        <div class="d-flex justify-content-between">
+            <label style="border: 2px solid black; background-color: black;color: whitesmoke;font-size: xx-large;" for="comment">Comment/Description</label> 
+            <a class="btn btn-link" style="width: 70px; height: 40px; background-color: lightgray; font-style: italic;border-color: buttonborder;font-size: larger;margin-top: 10px;" href="/dashboard">back</a>
+        </div>
+        <textarea name="comment" id="comment" cols="150" rows="20" style="font-size: 20px;"></textarea>
+        <button class="btn btn-success" style="height: 40px;width: 80px;">Save</button>
+    </div>
+    <div class="blur-overlay"></div>
+    <div class="d-flex justify-content-between align-items-center  mt-3 ">
         <h1 class="display-4 mr-5 table-dark" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> "To do, or not to do, that is the question:" </h1>
         <div class="d-flex justify-content-center ">
             <h2 class="mr-4" style="background-color: #ffffff05;backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); height: 50px; padding-top: 5px;color: rgb(165, 0, 165);text-decoration: underline;width: 300px;text-align: center;">Welcome {{user.first_name}}</h2>
@@ -104,7 +105,7 @@
                     <tbody style="background-color: aliceblue; position: sticky; left: 0;">
                         {% for todo in all_todos %}
                         <tr>
-                            <th  id="text1_{{todo.id}}"  scope="row"> <a href="/todo/{{todo.id}}/comment">{{todo.name}}</a>  </th>
+                            <th  id="text1_{{todo.id}}"  scope="row"> <a href="/todo/{{todo.name}}/comment">{{todo.name}}</a>  </th>
                             <td  id="text2_{{todo.id}}"> {% if todo.priority == 1 %} <p class="text-success">low priority</p>   {% elif todo.priority == 2 %} <p class="text-warning">medium priority</p> {% else %} <p class="text-danger">high priority</p>  {% endif %} </td>
                             <td  id="text3_{{todo.id}}">{{todo.due_to}}</td>
                             <td><a id="text4_{{todo.id}}" href="/todo/{{todo.id}}/edit">edit</a> | <a href="/todo/{{todo.id}}/delete" style="text-decoration: none;">delete</a></td>

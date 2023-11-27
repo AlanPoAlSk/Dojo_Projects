@@ -60,7 +60,7 @@ def edit(id):
     return render_template('dashboard_edit.html', todo = Todo.get_one(data), all_todos = Todo.show_all() , user = user)
 
 @app.route('/todo/<int:id>/update', methods=['POST'])
-def edit_show(id):
+def edit_to_do(id):
     data = {
         **request.form,
         'id' : id
@@ -74,14 +74,14 @@ def edit_show(id):
 
 
 
-@app.route('/todo/<int:id>/view')
-def view(id):
+@app.route('/todo/<int:id>/comment')
+def comment(id):
     if 'user_id' not in session:
-        return redirect('/dashboard')
+        return redirect('/')
     
     data = {
-        'id' : id
+        'id' :id  
     }
     user = User.show_name(session['user_id'])
-    todo = Todo.get_one(data)
-    return render_template('show_view.html',todo = todo , user = user)
+    
+    return render_template('comment.html', todo = Todo.get_one(data), all_todos = Todo.show_all() , user = user)
