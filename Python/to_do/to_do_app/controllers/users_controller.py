@@ -27,10 +27,9 @@ def log():
     logged_profile = User.login(request.form)
     if logged_profile:
         session['user_id'] = logged_profile.id
-        
-        return redirect('/dashboard' )
-    else :
-        return redirect('/#login')
+        return redirect('/dashboard')
+    else:
+        return redirect('/')
     
     
     
